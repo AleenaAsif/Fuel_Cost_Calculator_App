@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         distanceInput=findViewById(R.id.editTextNumberDecimal);
         efficiencyInput=findViewById(R.id.editTextNumberDecimal2);
         fuelcostInput=findViewById(R.id.editTextNumberDecimal3);
+        resultOutput=findViewById(R.id.editTextNumberDecimal4);
+        resultText=findViewById(R.id.textView4);
     }
 
     public void calculateFuelCost(View view){
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
         String result=  String.format("%.2f", totalCost);
         resultOutput.setText(result);
+        resultText.setVisibility(View.VISIBLE);
+        resultOutput.setVisibility(View.VISIBLE);
     }
 
 }
