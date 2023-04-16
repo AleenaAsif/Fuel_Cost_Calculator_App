@@ -24,5 +24,25 @@ public class MainActivity extends AppCompatActivity {
         fuelcostInput=findViewById(R.id.editTextNumberDecimal3);
     }
 
+    public void calculateFuelCost(View view){
+
+        //View parameter represents the button view that was clicked.
+
+        //input from get text comes as char, we convert it to string to parse it to Double
+
+        double distance = Double.parseDouble(distanceInput.getText().toString());
+        double efficiency=Double.parseDouble(efficiencyInput.getText().toString());
+        double fuelCost = Double.parseDouble(fuelcostInput.getText().toString());
+
+        //formula for calculating fuel cost
+
+        double totalCost = (distance / efficiency) * fuelCost;
+
+        //format fuelCost value as a string with two decimal places using the String.format() method.
+        // The "%.2f" tells the method to format the double value with two decimal places.
+
+        String result=  String.format("%.2f", totalCost);
+        resultOutput.setText(result);
+    }
 
 }
