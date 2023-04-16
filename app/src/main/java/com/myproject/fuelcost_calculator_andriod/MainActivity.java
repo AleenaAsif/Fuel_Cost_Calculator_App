@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     //declare the EditText and TextView widgets that are defined in the XML layout file.
     EditText distanceInput, efficiencyInput, fuelcostInput;
-    TextView resultOutput;
+    TextView resultOutput, resultText;
 
 
 
@@ -24,5 +24,5 @@ public class MainActivity extends AppCompatActivity {
         fuelcostInput=findViewById(R.id.editTextNumberDecimal3);
     }
 
-    
+
 }
