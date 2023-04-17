@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:icon="@drawable/fuelapp_icon"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.FuelCost_Calculator_Andriod"
