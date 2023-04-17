@@ -1,6 +1,9 @@
 package com.myproject.fuelcost_calculator_andriod;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Bundle;
@@ -12,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     //declare the EditText and TextView widgets that are defined in the XML layout file.
     EditText distanceInput, efficiencyInput, fuelcostInput;
     TextView resultOutput, resultText;
+
+    Button calculateButton;
 
 
 
@@ -25,9 +30,15 @@ public class MainActivity extends AppCompatActivity {
         fuelcostInput=findViewById(R.id.editTextNumberDecimal3);
         resultOutput=findViewById(R.id.editTextNumberDecimal4);
         resultText=findViewById(R.id.textView4);
+        Button calculateButton = findViewById(R.id.button);
+
+      
     }
 
-    public void calculateFuelCost(View view) {
+
+
+
+        public void calculateFuelCost() {
 
         //View parameter represents the button view that was clicked.
 
