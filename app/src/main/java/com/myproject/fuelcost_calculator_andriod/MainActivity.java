@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     //declare the EditText and TextView widgets that are defined in the XML layout file.
     EditText distanceInput, efficiencyInput, fuelcostInput;
-    TextView resultOutput, resultText;
+    TextView resultOutput, resultText , pkr;
 
     Button calculateButton;
 
@@ -30,15 +30,16 @@ public class MainActivity extends AppCompatActivity {
         fuelcostInput=findViewById(R.id.editTextNumberDecimal3);
         resultOutput=findViewById(R.id.editTextNumberDecimal4);
         resultText=findViewById(R.id.textView4);
-        Button calculateButton = findViewById(R.id.button);
+        calculateButton = findViewById(R.id.button);
+        pkr=findViewById(R.id.textView5);
 
-      
+
     }
 
 
 
 
-        public void calculateFuelCost() {
+        public void calculateFuelCost(View view) {
 
         //View parameter represents the button view that was clicked.
 
@@ -69,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
             resultOutput.setText(result);
             resultText.setVisibility(View.VISIBLE);
             resultOutput.setVisibility(View.VISIBLE);
+            pkr.setVisibility(View.VISIBLE);
+
+            distanceInput.setText("");
+            efficiencyInput.setText("");
+            fuelcostInput.setText("");
+
+            //all fields become empty for next use
         }
     }
 }
