@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     EditText distanceInput, efficiencyInput, fuelcostInput;
     TextView resultOutput, resultText , pkr;
 
-    Button calculateButton;
+    Button calculateButton ,clearButton;
 
 
 
@@ -32,6 +32,22 @@ public class MainActivity extends AppCompatActivity {
         resultText=findViewById(R.id.textView4);
         calculateButton = findViewById(R.id.button);
         pkr=findViewById(R.id.textView5);
+        clearButton = findViewById(R.id.button2);
+
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                distanceInput.setText("");
+                efficiencyInput.setText("");
+                fuelcostInput.setText("");
+                resultOutput.setText("");
+                resultText.setVisibility(View.INVISIBLE);
+                resultOutput.setVisibility(View.INVISIBLE);
+                pkr.setText("");
+                clearButton.setVisibility(View.GONE);
+
+            }
+        });
 
 
     }
@@ -71,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             resultText.setVisibility(View.VISIBLE);
             resultOutput.setVisibility(View.VISIBLE);
             pkr.setVisibility(View.VISIBLE);
+            clearButton.setVisibility(View.VISIBLE);
 
         }
     }
