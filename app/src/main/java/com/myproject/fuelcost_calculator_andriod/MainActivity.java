@@ -72,11 +72,6 @@ public class MainActivity extends AppCompatActivity {
             resultOutput.setVisibility(View.VISIBLE);
             pkr.setVisibility(View.VISIBLE);
 
-            distanceInput.setText("");
-            efficiencyInput.setText("");
-            fuelcostInput.setText("");
-
-            //all fields become empty for next use
         }
     }
 }
